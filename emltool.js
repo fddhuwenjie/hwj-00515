@@ -9,6 +9,7 @@ const { extractBodies, htmlToPlainText, extractExternalImageUrls } = require('./
 const { extractAttachments, listAttachments } = require('./lib/attachmentExtractor');
 const { checkSecurity, getRiskLevelText, getRiskColor } = require('./lib/securityChecker');
 const { generateReport, exportReport, generateJsonReport, generateMarkdownReport } = require('./lib/reportGenerator');
+const { runForensicAudit, generateForensicJsonReport, generateForensicMarkdownReport, exportForensicReport } = require('./lib/forensicAudit');
 
 function loadEml(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -61,11 +62,18 @@ emltool - EML 邮件 MIME 解析和附件提取工具
     -o, --output <file>     输出文件路径 (.json 或 .md)
     -f, --format <format>   报告格式: json 或 markdown (默认根据扩展名推断)
 
+  audit <file.eml>          邮件取证审计
+    -o, --output <file>     输出文件路径 (.json 或 .md)
+    -f, --format <format>   报告格式: json 或 markdown (默认根据扩展名推断)
+
 示例:
   node emltool.js inspect mail.eml
   node emltool.js extract mail.eml -o attachments/
   node emltool.js report mail.eml -o report.md
   node emltool.js report mail.eml -o report.json
+  node emltool.js audit mail.eml
+  node emltool.js audit mail.eml -o audit.json
+  node emltool.js audit mail.eml -o audit.md
 `);
 }
 
@@ -231,6 +239,44 @@ function cmdReport(emlData, options) {
   console.log('\n' + '='.repeat(60) + '\n');
 }
 
+function cmdAudit(emlData, options) {
+  const output = options.output;
+  const format = options.format || (output ? path.extname(output).slice(1) : 'json');
+
+  const audit = runForensicAudit(emlData);
+
+  console.log('\n' + '='.repeat(60));
+  console.log('  邮件取证审计');
+  console.log('='.repeat(60) + '\n');
+
+  console.log(`  总体风险等级: ${formatRiskBadge(audit.overallRisk)}`);
+  console.log(`  可疑信号: ${audit.signalSummary.total} 个 ` +
+    `(严重:${audit.signalSummary.critical} ` +
+    `高:${audit.signalSummary.high} ` +
+    `中:${audit.signalSummary.medium} ` +
+    `低:${audit.signalSummary.low})`);
+  console.log(`  Received 链路: ${audit.receivedChain.count} 跳`);
+  console.log(`  URL 数量: ${audit.urls.count} 个`);
+  console.log(`  附件: ${audit.attachmentsAudit.count} 个` +
+    (audit.attachmentsAudit.suspiciousCount > 0 ? ` (可疑:${audit.attachmentsAudit.suspiciousCount})` : ''));
+  console.log('');
+
+  if (output) {
+    const absOutput = path.resolve(output);
+    const result = exportForensicReport(audit, absOutput);
+    console.log(`  报告格式: ${result.format.toUpperCase()}`);
+    console.log(`  输出文件: ${absOutput}`);
+    console.log(`  状态: ✓ 生成成功`);
+  } else {
+    const report = format === 'markdown' || format === 'md'
+      ? generateForensicMarkdownReport(audit)
+      : generateForensicJsonReport(audit);
+    console.log(report);
+  }
+
+  console.log('\n' + '='.repeat(60) + '\n');
+}
+
 function formatAddress(addr) {
   if (!addr) return '';
   if (addr.name) {
@@ -281,6 +327,9 @@ function main() {
       break;
     case 'report':
       cmdReport(emlData, parsed.options);
+      break;
+    case 'audit':
+      cmdAudit(emlData, parsed.options);
       break;
     default:
       console.error(`错误: 未知命令 '${parsed.command}'`);
