@@ -1,0 +1,13 @@
+From: "Sender Name" <sender@example.com>
+To: "First Recipient" <recipient1@example.com>,
+ "Second Recipient" <recipient2@example.com>,
+	"Third Recipient" <recipient3@example.com>
+Subject: =?UTF-8?B?5L2g5aW9?=
+ =?UTF-8?B?5LiL5aSn6ICF?=
+ =?UTF-8?B?5paH56ug?=
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <folded-header-test@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Folded header body.

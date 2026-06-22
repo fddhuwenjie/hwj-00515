@@ -1,0 +1,10 @@
+From: =?UTF-8?B?55So5oi3?= <user@example.com>
+To: recipient@example.com
+Subject: =?UTF-8?B?5Lit5paH?= and =?UTF-8?Q?more?= =?ISO-8859-1?Q?B=F8lle?= mixed
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <rfc2047-mixed@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+RFC 2047 =E6=B7=B7=E5=90=88=E7=BC=96=E7=A0=81=E6=B5=8B=E8=AF=95=E3=80=82

@@ -1,0 +1,12 @@
+From: sender@example.com
+To: recipient@example.com
+Subject: Quoted-Printable Test
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <plain-qp@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello World!
+=E8=BF=99=E6=98=AF=E4=B8=80=E6=AE=B5=E9=9C=80=E8=A6=81 quoted-printable =E7=BC=96=E7=A0=81=E7=9A=84=E4=B8=AD=E6=96=87=E5=86=85=E5=AE=B9=E3=80=82
+Line with =3D sign.

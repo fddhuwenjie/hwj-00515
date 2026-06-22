@@ -1,0 +1,35 @@
+From: =?UTF-8?B?6L+Q6JCl?= <marketing@example.com>
+To: user@example.com
+Subject: =?UTF-8?B?TXVsdGlwYXJ0IFJlbGF0ZWQg5rWL6K+V?=
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <multipart-related@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="boundary_rel_test"
+
+--boundary_rel_test
+Content-Type: multipart/alternative; boundary="boundary_alt_test"
+
+--boundary_alt_test
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=E6=9F=A5=E7=9C=8B HTML =E7=89=88=E6=9C=AC=E4=BB=A5=E6=98=BE=E7=A4=BA=E5=9B=BE=E7=89=87=E3=80=82
+
+--boundary_alt_test
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><h1>=E5=B8=A6=E5=86=85=E8=81=94=E5=9B=BE=E7=89=87=E7=9A=84=E9=82=AE=E4=BB=B6</h1><img src=3D"cid:logo_cid" alt=3D"Logo"></body></html>
+
+--boundary_alt_test--
+
+--boundary_rel_test
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <logo_cid>
+Content-Disposition: inline; filename="logo.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGA
+WjR9awAAAABJRU5ErkJggg==
+
+--boundary_rel_test--

@@ -1,0 +1,21 @@
+From: sender@example.com
+To: recipient@example.com
+Subject: RFC 2231 Filename
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <rfc2231-filename@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary_rfc2231"
+
+--boundary_rfc2231
+Content-Type: text/plain; charset=utf-8
+
+RFC 2231 test body.
+
+--boundary_rfc2231
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename*=utf-8''%E4%B8%AD%E6%96%87%E6%96%87%E4%BB%B6.pdf
+
+UkZDIDIyMzEgZmlsZW5hbWUgdGVzdCBjb250ZW50Lg==
+
+--boundary_rfc2231--

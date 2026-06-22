@@ -4,7 +4,9 @@
   "description": "A powerful .eml email MIME parser and attachment extractor CLI",
   "main": "emltool.js",
   "scripts": {
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "node test/runner.js",
+    "test:gen-samples": "node test/generate_test_samples.js",
+    "test:watch": "node test/runner.js --watch"
   },
   "keywords": ["eml", "mime", "email", "parser", "attachment"],
   "author": "",

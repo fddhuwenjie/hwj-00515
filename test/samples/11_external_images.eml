@@ -1,0 +1,24 @@
+From: =?UTF-8?B?6JCl6ZSA?= <marketing@spam.com>
+To: user@example.com
+Subject: =?UTF-8?B?5aSW6YOo5Zu+54mH5rWL6K+V?=
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <ext-images@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="boundary_ext_img"
+
+--boundary_ext_img
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><h1>=E5=B8=A6=E8=BF=BD=E8=B8=AA=E5=83=8F=E7=B4=A0=E7=9A=84=E9=82=AE=E4=BB=B6</h1><img src=3D"https://tracker.example.com/pixel.gif?uid=3D123" alt=3D""><img src=3D"https://cdn.example.com/banner.jpg" alt=3D"banner"><img src=3D"cid:local_img" alt=3D"local"><p>=E7=82=B9=E5=87=BB<a href=3D"https://phish.example.com/login">=E8=BF=99=E9=87=8C</a>=E7=99=BB=E5=BD=95</p></body></html>
+
+--boundary_ext_img
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <local_img>
+Content-Disposition: inline; filename="logo.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGA
+WjR9awAAAABJRU5ErkJggg==
+
+--boundary_ext_img--

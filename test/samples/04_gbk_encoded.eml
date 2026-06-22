@@ -1,0 +1,10 @@
+From: =?UTF-8?B?R0JL55So5oi3?= <user@example.com>
+To: recipient@example.com
+Subject: =?GBK?B?suLK1A==?=
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <gbk-encoded-test@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=gbk
+Content-Transfer-Encoding: base64
+
+suLK10dCS7Hgwuu1xNX9zsTI3aGj

@@ -1,0 +1,11 @@
+From: sender@example.com
+To: recipient@example.com
+Subject: Base64 Encoded Plain
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <plain-base64@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBiYXNlNjQgZW5jb2RlZCBwbGFpbiB0ZXh0IGJvZHkgZm9yIHRlc3RpbmcuCues
+rOS6jOihjOWGheWuueOAgg==

@@ -1,0 +1,31 @@
+From: =?UTF-8?B?5Y+R5Lu25Lq6?= <sender@example.com>
+To: =?UTF-8?B?5pS25Lu25Lq6?= <recipient@example.com>
+Subject: =?UTF-8?B?TXVsdGlwYXJ0IE1peGVkIOa1i+ivlQ==?=
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <multipart-mixed@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary_mixed_test"
+
+--boundary_mixed_test
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=E8=AF=B7=E6=9F=A5=E7=9C=8B=E9=99=84=E4=BB=B6=E3=80=82
+
+--boundary_mixed_test
+Content-Type: application/pdf; name="report.pdf"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="report.pdf"
+
+JVBERi0xLjQKQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+QQ==
+
+--boundary_mixed_test
+Content-Type: text/plain; name="notes.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="notes.txt"
+
+QXR0YWNobWVudCB0ZXh0IGZpbGUgY29udGVudC4=
+
+--boundary_mixed_test--

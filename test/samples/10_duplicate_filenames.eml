@@ -1,0 +1,36 @@
+From: sender@example.com
+To: recipient@example.com
+Subject: Duplicate Filename Test
+Date: Mon, 20 Jan 2025 10:30:00 +0800
+Message-ID: <dup-filenames@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary_dup_name"
+
+--boundary_dup_name
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Multiple attachments with same name.
+
+--boundary_dup_name
+Content-Type: text/plain; name="readme.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="readme.txt"
+
+Rmlyc3QgcmVhZG1lIGNvbnRlbnQu
+
+--boundary_dup_name
+Content-Type: text/plain; name="readme.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="readme.txt"
+
+U2Vjb25kIHJlYWRtZSBjb250ZW50IC0gZGlmZmVyZW50IQ==
+
+--boundary_dup_name
+Content-Type: text/plain; name="readme.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="readme.txt"
+
+VGhpcmQgcmVhZG1lLg==
+
+--boundary_dup_name--

@@ -1,0 +1,40 @@
+From: =?UTF-8?B?6LSi5Yqh6YOo6Zeo?= <finance@fake-bank.com>
+To: =?UTF-8?B?5a6i5oi3?= <victim@example.com>
+Subject: =?UTF-8?B?44CQ57Sn5oCl44CR6K+35p+l55yL5Y+R56Wo?=
+Date: Thu, 23 Jan 2025 16:45:00 +0800
+Message-ID: <suspicious-004@scammer.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary_mixed_004"
+
+--boundary_mixed_004
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=E5=B0=8A=E6=95=AC=E7=9A=84=E5=AE=A2=E6=88=B7=EF=BC=9A
+
+=E8=AF=B7=E6=9F=A5=E7=9C=8B=E9=99=84=E4=BB=B6=E4=B8=AD=E7=9A=84=E5=8F=91=E7=A5=A8=EF=BC=8C=E5=A6=82=E6=97=A0=E7=96=91=E9=97=AE=E8=AF=B7=E5=B0=BD=E5=BF=AB=E4=BB=98=E6=AC=BE=E3=80=82
+
+  =E8=B4=A2=E5=8A=A1=E9=83=A8=E9=97=A8
+
+
+--boundary_mixed_004
+Content-Type: application/octet-stream; name="invoice.pdf.exe"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.pdf.exe"
+
+TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAACAAAAADh+6DgC0Cc0huAFMzSFUaGlzIHByb2dyYW0gY2Fubm90IGJlIHJ1biBpbiBE
+T1MgbW9kZS4NDQok
+
+--boundary_mixed_004
+Content-Type: application/vnd.ms-word.document.macroEnabled.12; name="=?UTF-8?B?6YeN6KaB6YCa55+l?=.docm"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="=?UTF-8?B?6YeN6KaB6YCa55+l?=.docm"
+
+UEsDBBQABgBmYWtlLWRvY20td2l0aC1tYWNyb3MtdmJhTU1NTU1NTU1NTU1NTU1NTU1NTU1N
+TU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1N
+TU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1N
+TU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1N
+TU1NTU1NTU1NTU1NTU1NTU0=
+
+--boundary_mixed_004--
